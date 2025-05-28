@@ -258,3 +258,4 @@ def update_map(min_revenue, max_chickfila_distance, min_traffic, zoning_filter):
 if __name__ == '__main__':
     app.run(debug=True)
 ```
+![newplot](https://github.com/user-attachments/assets/88ada6b2-ed13-483c-bd85-9be7e4eb1e16)
