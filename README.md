@@ -1,6 +1,52 @@
 # BizWiz
 A machine learning-powered business location optimization system that leverages external APIs and demographic data to identify optimal locations for new business establishments.
 
+## Purpose and Scope
+This document provides a high-level overview of the BizWiz platform, a machine learning-powered business location optimization system that leverages external APIs and demographic data to identify optimal locations for new business establishments. The platform analyzes geographic, demographic, and competitive factors to predict revenue potential and rank locations for business expansion.
+
+## System Overview
+BizWiz is a comprehensive platform that combines multiple data sources with machine learning algorithms to provide business location analysis and recommendations. The system uses RandomForestRegressor models to predict revenue potential based on demographic data, competition analysis, foot traffic patterns, and rental market conditions.
+
+### Core System Architecture
+<img width="1491" alt="Screenshot 2025-05-28 at 11 16 46 AM" src="https://github.com/user-attachments/assets/5bf66ccd-70f0-4031-8794-c00da7bdbf33" />
+
+## Business-Specific Analysis Systems
+The platform includes specialized analysis systems tailored for different business types and geographic scopes:
+<img width="734" alt="Screenshot 2025-05-28 at 11 18 34 AM" src="https://github.com/user-attachments/assets/7135e9da-0e1d-4f4e-b263-af209c7f6db2" />
+<img width="932" alt="Screenshot 2025-05-28 at 11 19 23 AM" src="https://github.com/user-attachments/assets/d86e43da-ca0e-467c-88e3-ba991570c6d3" />
+Sources: System specialization diagrams, analysis pipeline documentation
+
+## Platform Components
+### Core Analysis Engines
+The platform consists of five main Jupyter notebook-based analysis engines:
+- ShopWizard System: Specialized for barbershop location optimization in the Minneapolis-St. Paul metropolitan area
+- Restaurant Location Systems: Multiple implementations for Raising Cane's restaurant chain expansion analysis
+- General Business Analysis: Broad-purpose system for various business types with product recommendation capabilities
+### Web User Interfaces
+Two HTML-based wizard interfaces provide user-friendly access to the analysis systems:
+- bizwiz.html: Business wizard interface for general location analysis
+- caneswizard.html: Specialized interface for restaurant location analysis
+
+## External Data Integration
+The platform integrates with multiple external APIs to gather comprehensive location data:
+- Google Maps Places API: Competition and foot traffic data
+- US Census Bureau ACS5: demographic and population statistics
+- RentCast API: rental market data and property information
+- FCC Geo API: geographic coordinate validation and conversion
+## Machine Learning Pipeline
+All systems utilize a common ML architecture built on RandomForestRegressor models with standardized feature engineering processes for revenue prediction and location ranking.
+## Data Flow and Processing
+### System Integration and Data Flow
+<img width="1366" alt="Screenshot 2025-05-28 at 11 24 13 AM" src="https://github.com/user-attachments/assets/5a6ee160-6422-4195-b027-3b288ca0c67f" />
+### Sources: Data flow diagrams, API integration patterns, sequence diagrams
+
+## Technical Architecture Overview
+The BizWiz platform follows a modular architecture with shared components across specialized systems:
+- Shared ML Core: Common RandomForestRegressor implementation with standardized feature engineering
+- API Integration Layer: Unified interface for external data source access with caching mechanisms
+- Visualization Framework: Dash and Plotly based interactive mapping and analytics dashboard
+- Web Interface Layer: HTML wizard interfaces for user interaction
+
 ```
 import numpy as np
 import pandas as pd
