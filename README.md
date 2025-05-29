@@ -62,8 +62,8 @@ The BizWiz platform follows a modular architecture with shared components across
 
 ## 3. 
 47.91,-97.085
-<img width="574" alt="3 1" src="https://github.com/user-attachments/assets/1dde8921-0fb9-4f07-9d5a-8edf1dfb45c5" />
 <img width="999" alt="3 2" src="https://github.com/user-attachments/assets/d3388fea-92dc-4b91-adb6-88dc8ef94d1a" />
+<img width="574" alt="3 1" src="https://github.com/user-attachments/assets/1dde8921-0fb9-4f07-9d5a-8edf1dfb45c5" />
 
 ## 4. 
 47.905,-97.075
