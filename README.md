@@ -15,7 +15,8 @@ BizWiz is a comprehensive platform that combines multiple data sources with mach
 The platform includes specialized analysis systems tailored for different business types and geographic scopes:
 <img width="734" alt="Screenshot 2025-05-28 at 11 18 34 AM" src="https://github.com/user-attachments/assets/7135e9da-0e1d-4f4e-b263-af209c7f6db2" />
 <img width="932" alt="Screenshot 2025-05-28 at 11 19 23 AM" src="https://github.com/user-attachments/assets/d86e43da-ca0e-467c-88e3-ba991570c6d3" />
-Sources: System specialization diagrams, analysis pipeline documentation
+
+### Sources: System specialization diagrams, analysis pipeline documentation
 
 ## Platform Components
 ### Core Analysis Engines
