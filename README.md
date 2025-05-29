@@ -50,6 +50,8 @@ The BizWiz platform follows a modular architecture with shared components across
 - Web Interface Layer: HTML wizard interfaces for user interaction
 
 ```
+# === IMPORTS ===
+import os
 import numpy as np
 import pandas as pd
 import googlemaps
@@ -57,19 +59,18 @@ import requests
 import time
 from sklearn.ensemble import RandomForestRegressor
 import plotly.express as px
-from dash import Dash, dcc, html, Input, Output
+from dash import Dash, dcc, html, Input, Output, State
 import dash_bootstrap_components as dbc
 from math import radians, cos, sin, asin, sqrt
+from dotenv import load_dotenv
 
-# === API KEYS ===
+# === LOAD .env VARIABLES ===
+load_dotenv()
+GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
+CENSUS_API_KEY = os.getenv('CENSUS_API_KEY')
+RENTCAST_API_KEY = os.getenv('RENTCAST_API_KEY')
 
-GOOGLE_API_KEY = 'YOUR_GOOGLE_API_KEY_HERE'
-# Replace with your actual Google API key
-CENSUS_API_KEY = 'YOUR_CENSUS_API_KEY_HERE'
-# Replace with your actual Census API key
-RENTCAST_API_KEY = 'YOUR_RENTCAST_API_KEY_HERE'
-# Replace with your actual Rentcast API key
-
+# === GOOGLE MAPS CLIENT ===
 gmaps = googlemaps.Client(key=GOOGLE_API_KEY)
 
 # === GRID GENERATION - GRAND FORKS, ND ===
