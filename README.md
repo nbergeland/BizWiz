@@ -1,6 +1,4 @@
 # BizWiz
-https://nbergeland.github.io/BizWiz/
-
 
 A machine learning-powered business location optimization system that leverages external APIs and demographic data to identify optimal locations for new business establishments.
 
@@ -262,3 +260,7 @@ if __name__ == '__main__':
     app.run(debug=True)
 ```
 ![newplot](https://github.com/user-attachments/assets/88ada6b2-ed13-483c-bd85-9be7e4eb1e16)
+
+
+
+View as webpage @ https://nbergeland.github.io/BizWiz/
