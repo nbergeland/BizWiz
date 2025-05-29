@@ -263,4 +263,4 @@ if __name__ == '__main__':
 
 
 
-View as webpage @ https://nbergeland.github.io/BizWiz/
+View as webpage @ https://nbergeland.github.io/BizWiz/ & https://deepwiki.com/nbergeland/BizWiz/1-bizwiz-platform-overview
