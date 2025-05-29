@@ -49,6 +49,27 @@ The BizWiz platform follows a modular architecture with shared components across
 - Visualization Framework: Dash and Plotly based interactive mapping and analytics dashboard
 - Web Interface Layer: HTML wizard interfaces for user interaction
 
+# Key Location Findings
+1. 47.935,-97.08
+<img width="1018" alt="1" src="https://github.com/user-attachments/assets/905436c7-181d-4e68-9ab1-fe2fbdcec66d" />
+<img width="510" alt="1 2" src="https://github.com/user-attachments/assets/ab15e1c6-960a-43ab-a439-67237645947a" />
+
+2. 47.885,-97.095
+<img width="1023" alt="2" src="https://github.com/user-attachments/assets/52a0869f-3314-47f9-b90a-6e1b35d8e3e4" />
+<img width="552" alt="2 2" src="https://github.com/user-attachments/assets/ba26ff6f-3b08-47b0-b489-21698d95e59a" />
+
+3. 47.91,-97.085
+<img width="574" alt="3 1" src="https://github.com/user-attachments/assets/1dde8921-0fb9-4f07-9d5a-8edf1dfb45c5" />
+<img width="999" alt="3 2" src="https://github.com/user-attachments/assets/d3388fea-92dc-4b91-adb6-88dc8ef94d1a" />
+
+4. 47.905,-97.075
+<img width="563" alt="4 1" src="https://github.com/user-attachments/assets/07758847-6221-4032-b1d3-5881b8e515f6" />
+<img width="1025" alt="4 2" src="https://github.com/user-attachments/assets/6dc53113-a6f9-4133-b93f-1e141fc0eea4" />
+
+5. 47.91,-97.055
+<img width="677" alt="5 1" src="https://github.com/user-attachments/assets/71373a18-6e77-4e1a-965d-16003d7b7360" />
+<img width="1033" alt="5 2" src="https://github.com/user-attachments/assets/770f87ad-fbb2-4d42-bc89-1540675272ba" />
+
 ```
 # === IMPORTS ===
 import os
