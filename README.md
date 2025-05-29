@@ -67,13 +67,14 @@ The BizWiz platform follows a modular architecture with shared components across
 
 ## 4. 
 47.905,-97.075
-<img width="563" alt="4 1" src="https://github.com/user-attachments/assets/07758847-6221-4032-b1d3-5881b8e515f6" />
 <img width="1025" alt="4 2" src="https://github.com/user-attachments/assets/6dc53113-a6f9-4133-b93f-1e141fc0eea4" />
+<img width="563" alt="4 1" src="https://github.com/user-attachments/assets/07758847-6221-4032-b1d3-5881b8e515f6" />
 
 ## 5. 
 47.91,-97.055
-<img width="677" alt="5 1" src="https://github.com/user-attachments/assets/71373a18-6e77-4e1a-965d-16003d7b7360" />
 <img width="1033" alt="5 2" src="https://github.com/user-attachments/assets/770f87ad-fbb2-4d42-bc89-1540675272ba" />
+<img width="677" alt="5 1" src="https://github.com/user-attachments/assets/71373a18-6e77-4e1a-965d-16003d7b7360" />
+
 
 ```
 # === IMPORTS ===
