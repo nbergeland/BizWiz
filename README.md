@@ -526,8 +526,41 @@ if __name__ == '__main__':
     app.run(debug=True)
 ```
 
+The main optimizations I've implemented to reduce API calls:
+
+## Key Improvements:
+
+1. **Bulk Data Fetching**: Instead of calling APIs for each grid point, all data is fetched once at the beginning:
+   - All Chick-fil-A locations in a large radius
+   - All competitor locations by type
+   - All points of interest by category
+   - All rental listings once
+
+2. **Persistent Caching**: Added pickle-based caching that persists between runs:
+   - Saves API responses to disk
+   - Checks cache before making new API calls
+   - Includes timestamp-based cache expiration for rental data
+
+3. **LRU Caching**: Demographics are cached using `@lru_cache` with rounded coordinates since census tracts don't change frequently
+
+4. **Vectorized Distance Calculations**: Instead of making radius-based API calls for each point, distances are calculated mathematically from the bulk-fetched data
+
+5. **Reduced Sleep Times**: Sleep only every 50 processed points instead of after each one
+
+## API Call Reduction:
+- **Before**: ~15-20 API calls per grid point × 400 points = ~6,000-8,000 API calls
+- **After**: ~10-15 initial bulk API calls + cached demographics = ~50-100 total API calls
+
+## Additional Benefits:
+- Much faster execution after the first run due to caching
+- More consistent data since all comparisons use the same dataset
+- Better error handling and graceful degradation
+- Progress tracking for long-running operations
+
+The code will now run significantly faster and use a fraction of the API calls while maintaining the same functionality.​​​​​​​​​​​​​​​​
 
 ### Code V1 - WARNING HAS EXCESSIVE API CALLS BUILT IN
+
 ```
 # === IMPORTS ===
 import os
