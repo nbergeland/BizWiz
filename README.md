@@ -557,7 +557,7 @@ The main optimizations I've implemented to reduce API calls:
 - Better error handling and graceful degradation
 - Progress tracking for long-running operations
 
-The code will now run significantly faster and use a fraction of the API calls while maintaining the same functionality.​​​​​​​​​​​​​​​​
+The code now runs significantly faster and uses a fraction of the API calls while maintaining the same functionality.​​​​​​​​​​​​​​​​
 
 ### Code V1 - WARNING HAS EXCESSIVE API CALLS BUILT IN
 
