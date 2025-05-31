@@ -526,7 +526,7 @@ if __name__ == '__main__':
     app.run(debug=True)
 ```
 
-The main optimizations I've implemented to reduce API calls:
+The main optimizations implemented to reduce API calls:
 
 ## Key Improvements:
 
