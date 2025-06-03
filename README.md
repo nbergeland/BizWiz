@@ -604,7 +604,7 @@ Based on current Google Places API pricing, Nearby Search requests cost approxim
 
 This version of the code is well-optimized for cost efficiency with its caching system and bulk data fetching approach.
 
-### Code V1 - WARNING HAS EXCESSIVE API CALLS BUILT IN
+### Legacy Code V1 - WARNING HAS EXCESSIVE API CALLS BUILT IN RESULTING IN HIGH ASSOCIATED COST OF RUNNING THIS MODEL
 
 ```
 # === IMPORTS ===
