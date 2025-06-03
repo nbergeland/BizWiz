@@ -559,6 +559,51 @@ The main optimizations implemented to reduce API calls:
 
 The code now runs significantly faster and uses a fraction of the API calls while maintaining the same functionality.​​​​​​​​​​​​​​​​
 
+## API Cost Breakdown
+
+Looking at your code, I can estimate the Google Places API costs based on the API calls being made. Let me break down the usage:Based on the search results and analyzing your code, here's the estimated cost breakdown for running this Google Places API code:
+
+## API Usage Analysis
+
+Your code makes the following Google Places API calls:
+
+1. **Chick-fil-A locations**: 1 initial call + potential pagination calls
+2. **Competitor locations**: 7 competitors × 1 call each = 7 calls  
+3. **Points of Interest**: 4 POI types × 1 call each = 4 calls
+
+**Total API calls per run: ~12-15 calls** (depending on pagination)
+
+## Google Places API Pricing
+
+Based on current Google Places API pricing, Nearby Search requests cost approximately $0.032 USD per call. However, Google provides 10K free calls per SKU per month for commonly used APIs.
+
+## Cost Estimation
+
+**Per execution:**
+- 12-15 API calls × $0.032 = **$0.38 - $0.48 per run**
+
+**Monthly costs (if run daily):**
+- 30 runs × $0.48 = **~$14.40/month**
+
+**However, with Google's free tier:**
+- You get 10,000 free Nearby Search calls per month
+- At 15 calls per run, you could run this **~666 times per month for free**
+- **Cost would be $0 unless you exceed the free tier**
+
+## Additional Considerations
+
+1. **Caching saves money**: Your code uses smart caching, so subsequent runs won't repeat API calls for the same data
+2. **Rate limiting**: Your code includes appropriate delays to stay within API limits
+3. **Pagination costs**: Each pagination request (next page token) incurs an additional $0.032 charge
+
+## Recommendations
+
+- **For development/testing**: Likely free due to the 10K monthly limit
+- **For production**: Monitor usage carefully; consider implementing more aggressive caching
+- **Cost optimization**: The current caching strategy should keep you well within free limits for most use cases
+
+This version of the code is well-optimized for cost efficiency with its caching system and bulk data fetching approach.
+
 ### Code V1 - WARNING HAS EXCESSIVE API CALLS BUILT IN
 
 ```
@@ -774,6 +819,62 @@ if __name__ == '__main__':
     app.run(debug=True)
 ```
 
+## Legacy Code API Cost Breakdown
+
+Looking at this updated code, the cost will be **significantly higher** because it makes API calls for every single grid point instead of using bulk fetching and caching. Let me break down the usage:
+
+## API Usage Analysis
+
+**Grid Points:**
+- Grid: 47.85-47.95 lat × -97.15 to -97.0 lon with 0.005 spacing
+- That's 20 × 30 = **600 grid points**
+
+**API Calls Per Grid Point:**
+1. `get_chickfila_proximity()`: 1 call + potential pagination
+2. `get_fast_food_competition()`: 7 competitors × 1 call = 7 calls  
+3. `get_foot_traffic()`: 4 different place types = 4 calls
+
+**Total per grid point: ~12 API calls**
+**Total for entire run: 600 × 12 = ~7,200 API calls**
+
+## Cost Calculation
+
+Based on Google Places API pricing of ~$0.032 per Nearby Search call:
+
+**Single execution cost:**
+- 7,200 calls × $0.032 = **$230.40 per run**
+
+**With Google's free tier:**
+- You get 10,000 free calls per month
+- This single run uses 7,200 calls, leaving only 2,800 free calls
+- **First run per month: ~$0 (within free tier)**
+- **Second run: ~$230.40**
+- **Monthly cost if run weekly: ~$920**
+
+## Major Cost Concerns
+
+1. **No caching**: Every run repeats all API calls
+2. **Inefficient querying**: Makes separate calls for each grid point instead of bulk queries
+3. **Competitor overhead**: 7 API calls per grid point just for competition analysis
+4. **Rate limiting delays**: 0.3 second delays will make this run for ~30 minutes
+
+## Cost Comparison
+
+| Version | API Calls | Cost per Run | Monthly (4 runs) |
+|---------|-----------|--------------|------------------|
+| **Original (cached)** | ~15 | $0* | $0* |
+| **This version** | ~7,200 | $230 | $920 |
+
+*Within free tier
+
+## Recommendations
+
+1. **Use the first version**: The cached version is dramatically more cost-effective
+2. **If using this version**: Implement caching immediately to avoid repeated costs
+3. **For testing**: Run on a smaller grid first (e.g., 0.02 spacing instead of 0.005)
+4. **Monitor usage**: Set up billing alerts in Google Cloud Console
+
+This version will quickly consume your free tier and result in substantial charges for production use.
 
 
 View as webpage @ https://nbergeland.github.io/BizWiz/ & https://deepwiki.com/nbergeland/BizWiz/1-bizwiz-platform-overview
