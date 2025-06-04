@@ -17,7 +17,7 @@ The platform includes specialized analysis systems tailored for different busine
 <img width="932" alt="Screenshot 2025-05-28 at 11 19 23 AM" src="https://github.com/user-attachments/assets/d86e43da-ca0e-467c-88e3-ba991570c6d3" />
 
 ### Sources: System specialization diagrams, analysis pipeline documentation
-
+ 
 ## Platform Components
 ### Core Analysis Engines
 The platform consists of five main Jupyter notebook-based analysis engines:
